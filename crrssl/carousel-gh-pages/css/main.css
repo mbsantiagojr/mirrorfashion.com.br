@@ -1,0 +1,102 @@
+* { margin: 0; padding: 0; list-style: none; border: none; }
+
+html, body { min-height: 100%; }
+body,
+input, select, textarea { font: normal 13px Arial, Tahoma, sans-serif; color: #333333; }
+
+body { min-width: 940px; }
+
+p { margin-bottom: 15px; }
+
+.content { margin: 0 auto; }
+.fleft { float: left; }
+.fright { float: right; }
+.overflow { overflow: hidden; }
+
+.space-right { margin-right: 20px; }
+.column-full { width: 940px; }
+
+#carousel {
+    width: 100%; height: 300px;
+    position: relative;
+    margin: 100px 0 20px;
+}
+.step0 #carousel-inner { left: 0; }
+.step1 #carousel-inner { left: -100%; }
+.step2 #carousel-inner { left: -200%; }
+.step3 #carousel-inner { left: -300%; }
+.step4 #carousel-inner { left: -400%; }
+
+
+.carousel-2-items #carousel-inner { width: 200%; }
+.carousel-2-items .carousel-item { width: 50%; }
+#pager.carousel-2-items { width: 120px; }
+
+.carousel-3-items #carousel-inner { width: 300%; }
+.carousel-3-items .carousel-item { width: 33.33%; }
+#pager.carousel-3-items { width: 140px; }
+
+.carousel-4-items #carousel-inner { width: 400%; }
+.carousel-4-items .carousel-item { width: 25%; }
+#pager.carousel-4-items { width: 160px; }
+
+.carousel-5-items #carousel-inner { width: 500%; }
+.carousel-5-items .carousel-item { width: 20%; }
+#pager.carousel-5-items { width: 180px; }
+
+
+
+#carousel-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    -webkit-transition: all 1.2s;
+       -moz-transition: all 1.2s;
+        -ms-transition: all 1.2s;
+         -o-transition: all 1.2s;
+            transition: all 1.2s;
+}
+.carousel-item {
+    height: 300px;
+    position: relative;
+    width: 50%;
+    z-index: 10;
+}
+
+/* pager */
+#pager {
+    background: #333;
+    width: 120px;
+    height: 26px;
+    padding: 9px 15px 0;
+    border-radius: 7px;
+    z-index: 11;
+}
+.pager-arrow { 
+    cursor: pointer;
+    background: url('../images/sprite-arrows.png') no-repeat;
+    width: 10px; height: 16px;
+}
+#prev {
+    background-position: -10px bottom;
+    border-right: 1px solid #666;
+    padding-right: 5px;
+    margin-right: 29px;
+}
+#next {
+    background-position: 5px bottom;
+    border-left: 1px solid #666;
+    padding-left: 5px;
+}
+#prev.is-active { background-position: -10px top; }
+#next.is-active { background-position: 5px top; }
+.bullet {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #666;
+    margin-right: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.bullet.is-active { background: #ff6600; }

@@ -1,0 +1,26 @@
+
+.mbssel {
+	position: relative;
+}
+
+.mbssel li {
+	position: absolute;
+	z-index: -1;
+	left: 50%;
+	margin-left: -50%;
+}
+
+.mbssel .right {
+	right: 0;
+	z-index: 0;
+}
+
+.mbssel .left {
+	left: 0;
+	z-index: 0;
+}
+
+.mbssel .is-active {
+	z-index: 1;
+}
+

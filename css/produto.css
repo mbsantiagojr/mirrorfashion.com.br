@@ -1,0 +1,210 @@
+.cores label:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cores label:hover:before {
+    border: 6px solid rgba(255,255,255,0.7);
+}
+
+label[for="verde"]:before {
+    background: #33CC66;
+}
+
+label[for="rosa"]:before {
+    background: #FF6666;
+}
+
+label[for="azul"]:before {
+    background: #6666FF;
+}
+
+.cores input:checked + label:before {
+    border: 6px solid rgba(0,0,0,0.3);
+}
+
+.cores input[type="radio"] {
+    display: none;
+}
+
+.cores input:not(:checked) + label img {
+    display: none;
+}
+
+.cores label:before {
+    position: absolute;
+    top: 30px;
+}
+
+.cores {
+    position: relative;
+    padding-top: 80px;
+}
+
+.cores label[for="verde"]:before {
+    left: 0;
+}
+
+.cores label[for="rosa"]:before {
+    left: 60px;
+}
+
+.cores label[for="azul"]:before {
+    left: 120px;
+}
+
+.cores label img {
+    display: block;
+    max-width: 100%;
+}
+
+.produto {
+    margin-top: 2em;
+    line-height: 1.3;
+    color: #333;
+}
+
+.produto h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.produto small {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.produto legend {
+    display: block;
+    text-transform: uppercase;
+    font: bold 0.9em/2.5 Arial;
+}
+
+.comprar {
+    display: block;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    color: #333;
+    background: #91bd3c;
+    box-shadow: 0 1px 3px #777;
+}
+
+
+fieldset {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1em 0px;
+    min-width: 200px;
+    width: 45%;
+}
+
+
+.detalhes   {
+    padding: 2em opx;
+}
+
+.detalhes h2 {
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.detalhes p {
+    line-height: 1.5;
+    margin: 1em 0;
+    font-size: 1em;
+    max-width: 36em;
+}
+
+
+table {
+    border-spacing: 0.2em;
+    border-collapse: separate;
+}
+
+thead {
+    background: #999;
+}
+
+thead th {
+    font-weight: bold;
+    padding: 0.3em 1em;
+    text-align: center;
+}
+
+td {
+    padding: 0.3em;
+}
+
+tr:nth-child(even) {
+    background: #777;
+}
+
+td:first-child {
+    font-style: italic;
+}
+
+.tamanhos output {
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+
+  line-height:27px;
+  text-align: center;
+
+  border: 3px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 80%;
+}
+
+
+@media (min-width: 500px) {
+  .detalhes {
+    font-size: 1.2em;
+  }
+}
+
+
+@media(min-width:630px) {
+    .cores label:before {
+        margin: 0 10px;
+    }
+
+    .produto {
+        position: relative;
+        height: auto;
+        padding-left: 45%;
+    }
+
+    .cores {
+        position: static;
+        padding: 0;
+    }
+
+    .cores label img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .cores label:before {
+        float: left;
+        position: static;
+    }
+
+    .cores label img {
+        max-height: 100%;
+        max-width: 35%;
+    }
+
+    .produto {
+        font-size: 1.2em;
+    }
+}
